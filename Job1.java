@@ -9,12 +9,7 @@ import org.apache.hadoop.mapreduce.Mapper;
 import org.apache.hadoop.mapreduce.lib.input.FileSplit;
 
 public class Job1 {
-	/**
-	 * @author ruhansa
-	 * read files line by line, put the data into hbase style table
-	 * input: <key, value>, key: line number, value: line
-	 * output: <key, value>, key: rowid, value: hbase row content
-	 */
+
 	public static class Map1 extends Mapper<LongWritable, Text, ImmutableBytesWritable, Put>{
 		
 		public void map(LongWritable key, Text value, Context context){
